@@ -1,0 +1,6 @@
+{
+  "name": "道藏通鉴 · 道家源流与仙真图谱",
+  "description": "探索道家起源流变、历史重大事件、三清四御与历代仙真谱系，配有互动式人物关系图谱与历史时间轴的中华道文化数字典藏馆。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

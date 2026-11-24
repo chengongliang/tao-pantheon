@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
+  --font-sans: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-paper: #F8F5EF;
+  --color-paper-elevated: #FDFBF7;
+  --color-paper-warm: #EFEAE0;
+  --color-ink: #1C1917;
+  --color-ink-muted: #57534E;
+  --color-ink-subtle: #78716C;
+  --color-cinnabar: #9A2B1F;
+  --color-cinnabar-dark: #7F1D1D;
+  --color-celadon: #24574A;
+  --color-ochre: #8C6239;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+
+  /* Custom quiet scrollbars for horizontal timeline & modal drawers */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #EFEAE0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #C6BEB1;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9A8F7E;
+  }
+}
+
+/* Museum Xuan paper subtle surface texture */
+.xuan-surface {
+  background-color: #F8F5EF;
+  background-image: radial-gradient(rgba(120, 113, 108, 0.06) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
